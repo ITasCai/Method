@@ -62,12 +62,57 @@ namespace Method
 
             #region 求数组中的最大值
 
-            int max = MaxArray(99,101,66,77,528,152,77);
-            Console.WriteLine("最大值为：{0}",max);
-            Console.ReadLine();
+            //int max = MaxArray(99,101,66,77,528,152,77);
+            //Console.WriteLine("最大值为：{0}",max);
+            //Console.ReadLine();
 
 
             #endregion
+
+            #region 
+
+            //int num1 = 55;
+            //int num2 = 67;
+
+            //int num3 = GetXin(ref num1,ref num2);
+
+
+            #endregion
+
+            #region 统计字符的个位数
+
+            Console.WriteLine("请输入一个字符串");
+            string str = Console.ReadLine();
+            int count = GetCount(str);
+            Console.WriteLine("字符串中的字母个数为{0}：",count);
+            Console.ReadLine();
+            #endregion
+        }
+
+
+        /// <summary>
+        /// 计算字符串中的字母个数
+        /// </summary>
+        /// <param name="str">输入的字符串</param>
+        /// <returns>返回字符串中的字母个数</returns>
+        private static int GetCount(string str)
+        {
+            int count=0;
+            char[] ch = str.ToCharArray();
+            for (int i = 0; i < ch.Length; i++)
+            {
+                if ((ch[i]>='a'&&ch[i]<='z')||(ch[i] >= 'A' && ch[i] <= 'Z'))
+                {
+                    count++; 
+                }
+            }
+            return count;
+        }
+
+        private static int GetXin(ref int num1, ref int num2)
+        {
+            int num3 = (num1 > 60) ? num1 : num1 + 5;
+            return num3;
         }
 
         /// <summary>
